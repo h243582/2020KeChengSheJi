@@ -1,0 +1,16 @@
+.space3{
+    height: 0px;
+    transition: 1s;
+    margin-top: 0px;
+}
+.space3.active{
+    height: 460px;
+    margin-top: 60px;
+}
+.space3 table{
+    display: none;
+    transition: 1s;
+}
+.space3 table.active{
+    display: inline;
+}

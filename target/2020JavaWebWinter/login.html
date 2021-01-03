@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login/login.css">
+    <link rel="stylesheet" href="css/login/登录或者注册.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="js/login/登录或者注册.js"></script>
+    <script src="js/login/用户已存在.js"></script>
+    <script>
+        $(function () {
+            //失去焦点
+            $("#username").blur(function () {
+                // var username = $("#username").val();//获取到id为username的标签的值
+                var username =$("#username").val();
+                // 使用ajax发送请求
+                $.ajax({
+                    //url，写要访问的地址，这里访问的是servlet映射地址
+                    url: "AjaxRegisterServlet",
+                    cache: false,  // 是否缓存
+                    //参数  相当于地址栏后面的参数
+                    data: "username=" + username,
+                    //请求类型
+                    type: 'POST',
+                    timeout: 2000,
+                    //成功的回调   问成功后，执行的方法，参数是后台的结果
+                    success: function (result) {
+                        // 将获取到的数据写入span标签
+                        $("#span").text(result);
+                    }
+                })
+            })
+        })
+        function validate() {
+            var username = $("#username").val();//获取到id为username的标签的值
+            var password = $("#password").val();//获取到id为password的标签的值
+
+            //验证账号合法性
+            // var pa =
+            var pattern = /^[0-9]{5,30}$/;
+            if (username == '') {
+                alert("请输入注册账号！");
+                return false;
+            } else if (!pattern.test(username)) {
+                alert("账号格式不正确！");
+                return false;
+            }
+            //验证password
+            if (password == '') {
+                alert("请输入密码！");
+                return false;
+            } else if (password.length < 5) {
+                alert("密码长度在5个字符以上");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body style="overflow-x: hidden">
+
+<div class="button">
+    <input type="button" value="黄钻特权">
+    <input type="button" value="分享">
+    <input type="button" value="外团招募">
+
+</div>
+
+<div class="bg">
+    <img src="image/login/bg.jpg" alt="" width="100%">
+</div>
+<div class="d1">
+    <div>
+        <div><img src="image/login/star.png" width="102px">
+        </div>
+    </div>
+    <div>
+        <div>在线问卷调查系统</div>
+    </div>
+
+</div>
+
+<div class="space1"></div>
+
+<div class="j1">
+    <form action="LoginServlet" method="post" id="form" class="form">
+    <table>
+        <tr>
+            <th width="268">帐号密码登录界面</th>
+        </tr>
+        <tr>
+            <th width="268">
+                推荐使用<a href="javascript:" onclick="change()">快速安全登录</a>，防止盗号。
+            </th>
+        </tr>
+        <tr>
+            <th width="300">
+                    <input type="text" placeholder="支持QQ号/邮箱/手机号登录" name="username" id="username" width="268"><span id="span"></span>
+            </th>
+        </tr>
+        <tr>
+            <th width="300">
+                    <input type="password" placeholder="密码" name="password" id="password" width="268"><span id="span2" ></span>
+            </th>
+        </tr>
+        <tr>
+            <th width="268">
+                    <input type="submit" value="登录" id="submit" >
+            </th>
+        </tr>
+    </table>
+    <div>
+        <ul>
+            <li><a href="javascript:alert('自己查数据库去')">忘了密码？</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="javascript:;"  onclick=panDuan()>注册新帐号</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="index.html">返回主页</a></li>
+        </ul>
+    </div>
+</form>
+</div>
+
+<div CLASS="s">
+    <div>
+        <span>LPL x QQ x PUPU英雄联盟企鹅联名来袭</span>
+    </div>
+    <div>
+        <img src="image/login/s2.jpg" alt="" height="381px">
+        <div>QTX潮玩展 | 艺展美陈空间设计揭秘</div>
+    </div>
+    <div>
+        <video controls width="381px" height="763px">
+            <source src="image/login/s3.mp4">
+        </video>
+        <div>QQfamily</div>
+    </div>
+    <div>
+        <img src="image/login/s4.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="image/login/s5.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+    <img src="image/login/s6.jpg" alt="" width="763px">
+    <div></div>
+</div>
+    <div>
+        <img src="image/login/s7.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="image/login/s8.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="image/login/s9.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="image/login/s10.jpg" alt="" width="763px">
+        <div></div>
+    </div>
+    <div>
+        <img src="image/login/s11.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <spen><img src="image/login/s12.jpg" alt="" width="381px"></spen>
+        <div></div>
+    </div>
+
+
+
+</div>
+<div style="height: 2300px"></div>
+
+<div class="d7">
+    <div style="margin-top: 380px">
+        <ul style="margin-left: 400px">
+            <li><a href="">关于问卷</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">About Tencent</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">服务协议</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">开放平台</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">广告服务</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">商务洽谈</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯招聘</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">问卷公益</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">客服中心</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">网站导航</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">版权所有</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">ABCourse问卷</a></li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+    <div align="center">Copyright © 1998 - 2020 Tencent. <a
+            href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">All Rights Reserved.</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 微软雅黑, serif;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    position: relative;
+    top: -5px;
+    left: 3px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.backImg {
+    /*页面背景*/
+    background-color: #EAF2F7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -0%;
+    z-index: -1;
+}
+
+.mainBack {
+    background: #fff;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+}
+.resume_left{
+    /*简历表和白色边框的距离*/
+    margin-left: 9%;
+    margin-top: 10px;
+}
+
+.resume_title>div:first-child{
+    /*我的个人信息*/
+    padding-top: 20px;
+    font-family: 方圆准圆体, serif;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 1%;
+    padding-bottom: 5%;
+}
+.table_style{
+    margin-top: 10px;
+    padding-left: 8%;
+}
+.star{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    float: right;
+    padding-right: 30%;
+    padding-top:15%;
+    font-family: 方圆准圆体, serif;
+    text-align: center;
+}
+.gender input{
+    height: 16px;
+    width: 16px;
+    padding-top: 20px;
+    vertical-align: middle;
+}
+.table_style input{
+    /*input标签*/
+    line-height: 27px;
+}
+.table_style table tr th{
+    /*左边标签*/
+    text-align: right;
+    color: #999;
+}
+.table_style table tr td,.table_style table tr th{
+    /*左边和右边标签*/
+    background-color: #F8F8F8;
+    border: #cccccc solid 1px;
+    line-height: 27px;
+}
+
+/*按钮*/
+.table_style table+div{
+    margin-top: 7%;
+    padding-bottom: 10%;
+}
+.save{
+    background-color: #0fdcef;
+    color: white;
+    width: 35%;
+    height: 40px;
+    margin-right: 40px;
+    margin-left: 10%;
+    font-size: 20px;
+    display: block;
+    border: 2px solid #B2B2B2;
+    border-radius: 8px;
+    text-align: center;
+    float: left;
+}
+.cancel{
+    background-color: #cccccc;
+    color: #999;
+    width: 35%;
+    height: 40px;
+    /*margin-top: 40px;*/
+    margin-left: 10%;
+    font-size: 20px;
+    display: block;
+    border: 2px solid #B2B2B2;
+    border-radius: 8px;
+    text-align: center;
+}
+input:hover,table th:hover,table td:hover,button:hover{
+    box-shadow: 0 0 5px #008CBA;
+}

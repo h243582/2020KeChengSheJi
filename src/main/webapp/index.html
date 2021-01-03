@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/index/马上登录.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="js/index/index.js"></script>
+
+    <script src="js/index/马上登录.js"></script>
+    <script src="js/login/登录或者注册.js"></script>
+    <script src="js/index/游客登录.js"></script>
+    <script>
+        $(function () {
+
+            $.ajax({
+                url: "AjaxGetAnyServlet",
+                async: false,
+                // cache: false,  // 是否缓存
+                type: 'POST',
+
+            })
+        })
+    </script>
+
+</head>
+<body style="overflow-x: hidden">
+
+<div class="d1">
+    <div>
+        <img src="image/index/logo.png " width="83px" height="83px"><a href="">在线问卷系统</a></img>
+    </div>
+    <div>
+        <table height="83px" cellspacing="25" >
+            <tr>
+                <th><a href="">首页</a></th>
+                <th><a href="">注册</a></th>
+                <th><a href="">特权</a></th>
+                <th><a href="">特权与等级</a></th>
+                <th><a href="">活动</a></th>
+                <th><a href="">豪华版</a></th>
+                <th width="250"><a href=""></a></th>
+                <td>您还没有登录，<a href="javascript:" onclick="gogo()">马上登录</a></td>
+        </table>
+    </div>
+
+</div>
+
+<div class="space1" style="opacity: 70%"></div>
+
+<div class="space3"  style="opacity: 70%">
+    <table cellspacing="20px">
+        <tr>
+            <th colspan="4">&nbsp;<a href="login.html"><i class=" fa fa-account-circle-o"></i>用户登录或注册</a></th>
+        </tr>
+        <tr>
+            <th colspan="4">&nbsp;<a href="javascript:visit()" ><i class=" fa fa-diamond"></i>游客登录</a></th>
+        </tr>
+        <tr>
+            <th colspan="4">&nbsp;<a href="readUserInformation.jsp" ><i class=" fa fa-diamond"></i>查看所有用户</a></th>
+        </tr>
+        <tr>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
+            <th colspan="4">问卷为您提供：&nbsp; &nbsp; &nbsp; <a href="https://vip.qzone.qq.com/priv/">查看所有<i
+                    class=" fa fa-location-arrow"></i></a></th>
+        </tr>
+        <tr>
+            <th><a href=""><img src="image/index/装扮特权.png" alt="" height="30" width="36"><br>装扮特权</a></th>
+            <th><a href=""><img src="image/index/功能特权.png" alt="" height="30" width="36"><br>功能特权</a></th>
+            <th><a href=""><img src="image/index/生活特权.png" alt="" height="30" width="36"><br>生活特权</a></th>
+            <th><a href=""><img src="image/index/游戏特权.png" alt="" height="30" width="36"><br>游戏特权</a></th>
+        </tr>
+    </table>
+</div>
+
+<!--第二块 轮播-->
+<div class="d2">
+    <div class="wrap">
+        <ul class="list">
+            <li class="item active">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="image/index/1.jpg " alt="" width="100%" height="840"></a>
+            </li>
+            <li class="item">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="image/index/2.jpg" alt="" width="100%" height="840"></a>
+            </li>
+            <li class="item">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="image/index/3.jpg" alt="" width="100%" height="840"></a>
+            </li>
+            <li class="item">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="image/index/4.jpg" alt="" width="100%" height="840"></a>
+            </li>
+        </ul>
+        <ul class="pointList">
+            <li class="point active" data-index='0'></li>
+            <li class="point" data-index='1'></li>
+            <li class="point" data-index='2'></li>
+            <li class="point" data-index='3'></li>
+        </ul>
+<!--        <button type="button" class="btn" id="goPre"><i class="fa fa-chevron-left"></i></button>-->
+<!--        <button type="button" class="btn" id="goNext"><i class="fa fa-chevron-right"></i></button>-->
+    </div>
+</div>
+
+
+</body>
+</html>

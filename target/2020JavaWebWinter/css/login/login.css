@@ -1,0 +1,304 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: 微软雅黑, serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    position: relative;
+    top: -5px;
+    left: 3px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button input:first-child{
+    height: 100px;
+    width: 35px;
+    position: fixed;
+    top: 150px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #E0B755;
+    color: #9E5200;
+    border: none;
+    font-size: 16px;
+}
+
+.button input:nth-child(2) {
+    height: 50px;
+    width: 35px;
+    position: fixed;
+    top: 260px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #159DEA;
+    color: white;
+    border: none;
+    font-size: 16px;
+
+}
+
+.button input:nth-child(3) {
+    height: 110px;
+    width: 35px;
+    position: fixed;
+    top: 320px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #159DEA;
+    color: white;
+    border: none;
+    font-size: 16px;
+
+}
+
+.button input:hover {
+    box-shadow: 0 0 5px 1px #008CBA;
+}
+
+.bg {
+    height: 1080px;
+    position: absolute;
+}
+
+.j1 {
+    border: 3px solid #EEEEEE;
+    background-color: #ffffff;
+    width: 430px;
+    height: 316px;
+    position: absolute;
+    left: 60%;
+    top: 23%;
+}
+
+.j1 table {
+    height: 270px;
+    width: 374px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.j1 table tr:first-child th {
+    font-size: 21px;
+    font-family: 方圆准圆体, serif;
+}
+
+.j1 table tr:nth-child(2) th {
+    color: #B2B2B2;
+    font-family: 方圆准圆体, serif;
+}
+
+.j1 table tr:nth-child(2) th a {
+    color: #3481CF;
+    font-family: 方圆准圆体, serif;
+}
+
+.j1 table input {
+    width: 80%;
+    height: 40px;
+    border: 2px solid #B2B2B2;
+    border-radius: 5px;
+}
+
+.j1 table tr:nth-child(3) th input, .j1 table tr:nth-child(4) th input {
+}
+
+.j1 table tr:nth-child(5) th input {
+    background-color: #86CE2F;
+    color: white;
+}
+
+.j1 table tr:nth-child(5) th input:hover {
+    box-shadow: 0 0 5px #008CBA;
+}
+
+.j1 div {
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.j1 div ul li {
+    float: left;
+    font-size: 12px;
+    margin-left: 5px;
+    color: #B2B2B2;
+}
+
+/*图片位置*/
+.s {
+    position: absolute;
+    top: 960px;
+    left: 180px;
+    font-size: 18px;
+    width: 1150px;
+    margin-top: 200px;
+}
+.s>div{
+    float: left;
+    margin: 1px;
+}
+.s>div>div{
+    position: relative;
+    top: -50px;
+    text-align: center;
+}
+.s>div:first-child {
+    background-image: url("../../image/login/s1.jpg");
+    background-size: 763px 381px;
+    height: 381px;
+    width: 763px;
+    color: white;
+    text-align: center;
+}
+.s>div:first-child span{
+    position: relative;
+    top: 90%;
+}
+.s div:nth-child(2),.s div:nth-child(4),.s div:nth-child(5),.s div:nth-child(7),.s div:nth-child(8),.s div:nth-child(9),.s div:nth-child(11),.s div:nth-child(12){
+    width: 381px;
+    height: 381px;
+}
+.s div:nth-child(3){
+    width: 381px;
+    height: 763px;
+}
+.s div:nth-child(6){
+    width: 763px;
+    height: 381px;
+}
+.s div:nth-child(10){
+    width: 763px;
+    height: 763px;
+}
+.s>div>img,.s video{
+    filter:grayscale(100%);
+}
+.s img:hover,.s video:hover{
+    filter:grayscale(0%);
+}
+.s div{
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: all 0.6s;/*表示所有的属性变化在0.6s的时间段内完成。*/
+}
+
+.s div:hover{
+    transform: rotateY(20deg) rotateX(20deg);
+
+    transition: all 0.6s;/*表示所有的属性变化在0.6s的时间段内完成。*/
+
+}
+
+
+
+
+
+.d1 > div:first-child {
+    width: 461px;
+    height: 101px;
+    position: absolute;
+    left: 0px;
+}
+
+.d1 > div img {
+    margin-left: 320px;
+}
+
+.d1 > div:nth-child(2) {
+    width: 80%;
+    height: 101px;
+    /*background-color: #BDC3CF;*/
+    position: absolute;
+    left: 421px;
+}
+
+.d1 > div:nth-child(2) > div:first-child {
+    /*在线问卷调查系统*/
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 32px;
+    color: white;
+    float: left;
+}
+
+
+
+/*第二组*/
+.d2 {
+    background-color: #FFCB04;
+    /*height: 490px;*/
+    width: 100%;
+}
+
+.space1 {
+    height: 979px;
+}
+
+
+.d7{
+   text-align: center;
+
+}
+.d7 li {
+    float: left;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.d6 div:nth-child(2), .d7 div:nth-child(2) {
+    margin-left: 40%;
+}
+
+.d6, .d6 a {
+    color: #D2B19C;
+}
+
+.d7, .d7 a {
+    height: 150px;
+    background-color: #F3F3F3;
+    color: #D2B19C;
+}
+/*弹出悬浮div框时，背景被覆盖*/
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 3809px;
+    background-color: whitesmoke;
+    z-index: 1001;
+    /*-moz-opacity: 0.8;*/
+    opacity: 70%;
+    /*filter: alpha(opacity=88);*/
+}
+
+.window {
+    display: none;
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    width: 18%;
+    height: 15%;
+    padding: 30px;
+    border: 10px solid #86CE2F;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    z-index: 1002;
+}
+.window button{
+    background-image:url('../../image/login/cha.png');
+    float: right;height: 32px;
+    width: 33px;border: 2px solid #B2B2B2;
+    border-radius: 10px;
+}
+.window button:hover{
+    box-shadow: 0 0 5px #008CBA;
+}
+

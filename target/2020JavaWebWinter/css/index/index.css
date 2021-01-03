@@ -1,0 +1,254 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    /*不要下划线*/
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.d1 {
+    /*黑色背景*/
+    background-color: #2B2B2B;
+    height: 83px;
+    width: 100%;
+}
+
+.d1 div:first-child {
+    /*在线问卷系统位置大小*/
+    width: 340px;
+    height: 83px;
+    float: left;/*不换行*/
+    text-indent: 50px;
+}
+
+.d1 div:first-child img {
+    /*图标*/
+    vertical-align: middle;
+}
+
+.d1 div:first-child a {
+    /*在线问卷系统字*/
+    color: #FFFFFF;
+    font-family: 方圆准圆体, serif;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.d1 div:first-child a:hover {
+    /*鼠标移上去时*/
+    background-color: #6e6e6e;
+}
+
+.d1 div:nth-child(2) table {
+    /*导航栏大小位置*/
+    width: 1000px;
+    float: left;
+    margin-left: 100px;
+}
+
+.d1 div:nth-child(2) table th a {
+    /*导航栏字*/
+    /*margin-left: 50px;*/
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.d1 div:nth-child(2) a:hover {
+    /*鼠标移上去时*/
+    background-color: #6e6e6e;
+}
+
+.d1 div:nth-child(2) td {
+    /*登录左边的字*/
+    /*margin-left: 600px;*/
+    color: #797979;
+}
+
+.d1 div:nth-child(2) td a {
+    /*现在登录的字*/
+    color: #F6B81D;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.space1 {
+    /*一条黄横线*/
+    width: 100%;
+    height: 5px;
+    background-color: #FDDA19;
+}
+
+.space3 {
+    /*登录处*/
+    margin-top: 60px;
+    /*line-height: 580px;*/
+    background-color: #FDDA19;
+    height: 500px;
+    width: 305px;
+    position: absolute;
+    left: 70%;
+    z-index: 9999;
+}
+
+.space3 table {
+    margin-top: 20px;
+}
+
+.space3 tr:first-child th, .space3 tr:nth-child(2) th,.space3 tr:nth-child(3) th{
+    /*登录和黄钻的大小*/
+    height: 50px;
+    width: 300px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.space3 tr:first-child th a,.space3 tr:nth-child(3) th a {
+    /*登录字*/
+    color: #812A13;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.space3 tr:nth-child(2) th {
+    /*游客登录背景*/
+    background-color: #A55011;
+}
+
+.space3 tr:nth-child(2) th a {
+    /*游客登录字*/
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.space3 tr:first-child th:hover, .space3 tr:nth-child(2) th:hover, .space3 tr:nth-child(3) th:hover {
+    background-color: #F4D556;
+}
+
+.space3 tr:nth-child(2) th:hover {
+    background-color: #AB5E12;
+}
+
+.space3 tr:nth-child(4) th {
+    /*第三行空白*/
+    height: 80px;
+}
+
+.space3 tr:nth-child(4) th {
+    /*问卷为您提供*/
+    font-size: 13px;
+}
+
+.space3 tr:nth-child(4) th a {
+    /*查看所有*/
+    font-size: 8px;
+    text-decoration: none;
+}
+
+.space3 tr:nth-child(5) th a:hover {
+    /*鼠标移至查看所有时加下划线*/
+    text-decoration: underline;
+}
+
+.space3 tr:nth-child(6) th a {
+    font-size: 8px;
+    text-decoration: none;
+    font-family: inherit;
+    color: #812A13;
+}
+
+.space3 tr:nth-child(6) th :hover {
+    text-decoration: underline;
+}
+
+/*---轮播----*/
+ .wrap {
+     width: 100%;
+     height: 840px;
+     position: absolute;
+ }
+
+.list {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 3s;
+    position: absolute;
+}
+
+
+.btn {
+    width: 40px;
+    height: 70px;
+    color: antiquewhite;
+    font-size: 30px;
+    background-color:transparent;
+    border-color: antiquewhite;
+    /*border-style:none;*/
+    border-radius: 4px;
+    position: absolute;
+    top: 250px;
+    z-index: 100;
+}
+
+#gopPre {
+    left: 0px;
+}
+
+#goNext {
+    right: 0px;
+}
+
+.item.active {
+    z-index: 10;
+    opacity: 1;
+}
+
+/*    列表圆圈*/
+.pointList {
+    padding-left: 0px;
+    list-style: none;
+    position: absolute;
+    right: 50px;
+    top: 800px;
+    z-index: 1000;
+}
+
+.point {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 100%; /*变成圆*/
+    float: left;
+    margin-right: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+.point.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}

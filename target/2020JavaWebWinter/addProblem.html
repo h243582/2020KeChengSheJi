@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="utf-8">
+    <title>小学生心理健康状况调查问卷_问卷星</title>
+    <link rel="stylesheet" href="css/startPorblem/startPorblem.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="js/startPorblem/startPorblem.js"></script>
+    <script src="js/login/用户已存在.js"></script>
+
+    <script>
+        $(function () {
+            $.post("AjaxPanDanLoginServlet",{},function (result){
+                console.log(result);
+                if (result.flag==false){
+                    //没注册
+                    change();
+                    $("#form").attr("action","FirstAddProblemServlet?method=youke");
+                }
+            },"json")
+
+        })
+    </script>
+</head>
+<body>
+<div class="backImg"></div>
+<div class="mainBack">
+    <div class="Top">
+        <div>小学生心理健康状况调查问卷</div>
+        <div>
+            亲爱的同学:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;你好！<br>
+            我们是即将为你们服务的长沙市心家园公益人服务中心的心理志愿者，为了更好地设计你们的心理课程，我们进行了此次问卷调查。本次调查为匿名方式，因此希望你能够认真、真实地填答，回答无对错之分。
+            你的帮助对我们很重要，衷心感谢你的合作！
+        </div>
+        <form action="FirstAddProblemServlet?method=add" method="post" id="form">
+            <div class="start">
+                <div class="bigTitle">
+                    <div class="title">一、基本情况:</div>
+                    <div class="littleTitleTop">
+                        <p>1、基本信息&nbsp;</p>
+                        <div>性别&nbsp;</div>
+                        <input name="text1" type="text" class="101"><br>
+                        <div>年龄（周岁）&nbsp;</div>
+                        <input name="text2" type="text" class="101"><br>
+                        <div>学校&nbsp;</div>
+                        <input name="text3" type="text" class="101"><br>
+                        <div>年级&nbsp;</div>
+                        <input name="text4" type="text" class="101"><br>
+                        <div>班级&nbsp;</div>
+                        <input name="text5" type="text" class="101"><br>
+                    </div>
+                    <div class="littleTitle">
+                        <!--第1.2题-->
+                        <div class="text2" class="t2">
+                            <p>2.爸爸的最高学历是？&nbsp;</p>
+                            <input name="102" type="radio" class="" value="没上过学">
+                            <div>A.没上过学&nbsp;</div>
+                            <input name="102" type="radio" class="" value="小学文化">
+                            <div>B.小学文化&nbsp;</div>
+                            <input name="102" type="radio" class="" value="初中文化">
+                            <div>C.初中文化&nbsp;</div>
+                            <input name="102" type="radio" class="" value="高中或职中">
+                            <div>D.高中或职中&nbsp;</div>
+                            <input name="102" type="radio" class="" value="大专或以上">
+                            <div>E.大专或以上&nbsp;</div>
+                            <input name="102" type="radio" class="" value="不知道">
+                            <div>F.不知道&nbsp;</div>
+                        </div>
+                        <!--第1.3题-->
+                        <div class="text3">
+                            <p>3.妈妈的最高学历是？&nbsp;</p>
+                            <input name="103" type="radio" class="" value="没上过学">
+                            <div>A.没上过学&nbsp;</div>
+                            <input name="103" type="radio" class="" value="小学文化">
+                            <div>B.小学文化&nbsp;</div>
+                            <input name="103" type="radio" class="" value="初中文化">
+                            <div>C.初中文化&nbsp;</div>
+                            <input name="103" type="radio" class="" value="高中或职中">
+                            <div>D.高中或职中&nbsp;</div>
+                            <input name="103" type="radio" class="" value="大专或以上">
+                            <div>E.大专或以上&nbsp;</div>
+                            <input name="103" type="radio" class="" value="不知道">
+                            <div>F.不知道&nbsp;</div>
+                        </div>
+                        <!--第1.4题-->
+                        <div class="text4">
+                            <p>4.你有多少个兄弟姐妹&nbsp;</p>
+                            <input name="104" type="radio" class="" value="独生子女">
+                            <div>A.独生子女&nbsp;</div>
+                            <input name="104" type="radio" class="" value="1个">
+                            <div>B.1个&nbsp;</div>
+                            <input name="104" type="radio" class="" value="2个">
+                            <div>C.2个&nbsp;</div>
+                            <input name="104" type="radio" class="" value="3个及以上">
+                            <div>D.3个及以上&nbsp;</div>
+                        </div>
+
+
+                        <div class="title">二、具体情况:</div>
+                        <!--第2.1题-->
+                        <div class="t1">
+                            <p>1．你现在和谁住在一起?（多选）&nbsp;</p>
+                            <input name="T2_1" type="checkbox" class="" value="爸爸">
+                            <div>A.爸爸&nbsp;</div>
+                            <input name="T2_1" type="checkbox" class="" value="妈妈">
+                            <div>B.妈妈&nbsp;</div>
+                            <input name="T2_1" type="checkbox" class="" value="爷爷奶奶（或外公外婆）">
+                            <div>C.爷爷奶奶（或外公外婆）&nbsp;</div>
+                            <input name="T2_1" type="checkbox" class="" value="伯父伯母叔叔婶婶">
+                            <div>D.伯父伯母叔叔婶婶&nbsp;</div>
+                            <input name="T2_1" type="checkbox" class="" value="自己一人">
+                            <div>E.自己一人&nbsp;</div>
+                            <input name="T2_1" type="checkbox" class="" value="其他">
+                            <div>F.其他（请填写）&nbsp;<input type="text" class="T2_1_t" name="T2_1_t"  style="display: none"></div>
+                        </div>
+                        <!--第2.2题-->
+                        <div class="t2">
+                            <p>2.平时和你住在一起的人对你的态度是怎样的?&nbsp;</p>
+                            <input name="T2_2" type="radio" class="" value="很关心关爱">
+                            <div>A.很关心关爱&nbsp;</div>
+                            <input name="T2_2" type="radio" class="" value="一般关爱">
+                            <div>B.一般关爱&nbsp;</div>
+                            <input name="T2_2" type="radio" class="" value="冷淡">
+                            <div>C.冷淡&nbsp;</div>
+                        </div>
+                        <!--第2.3题-->
+                        <div class="t3">
+                            <p>3.平时照顾你的人对你的管教是什么样子的?&nbsp;</p>
+                            <input name="T2_3" type="radio" class="" value="感觉非常好">
+                            <div>A.感觉非常好&nbsp;</div>
+                            <input name="T2_3" type="radio" class="" value="严格，但有自己能够决定的事情">
+                            <div>B.严格，但有自己能够决定的事情&nbsp;</div>
+                            <input name="T2_3" type="radio" class="" value="管教严格，感觉非常依赖别人生活">
+                            <div>C.管教严格，感觉非常依赖别人生活&nbsp;</div>
+                            <input name="T2_3" type="radio" class="" value="没有管教、约束">
+                            <div>D.没有管教、约束&nbsp;</div>
+                        </div>
+                        <!--第2.4题-->
+                        <div class="t4">
+                            <p>4.爸爸（妈妈）平时跟你聊天的内容主要是什么?（多选）&nbsp;</p>
+                            <input name="T2_4" type="checkbox" class="" value="学习">
+                            <div>A.学习&nbsp;</div>
+                            <input name="T2_4" type="checkbox" class="" value="生活">
+                            <div>B.生活&nbsp;</div>
+                            <input name="T2_4" type="checkbox" class="" value="情感">
+                            <div>C.情感&nbsp;</div>
+                            <input name="T2_4" type="checkbox" class="" value="安全">
+                            <div>D.安全&nbsp;</div>
+                            <input name="T2_4" type="checkbox" class="" value="交往">
+                            <div>E.交往&nbsp;</div>
+                            <input name="T2_4" type="checkbox" class="" value="其他">
+                            <div>F.其他（请填写）&nbsp;<input type="text" class="T2_4_t" name="T2_4_t"  style="display: none"></div>
+                        </div>
+                        <!--第2.5题-->
+                        <div class="t5">
+                            <p>5.你觉得爸爸妈妈爱你吗？（ ）&nbsp;</p>
+                            <input name="T2_5" type="radio" class="" value="都爱我">
+                            <div>A.都爱我&nbsp;</div>
+                            <input name="T2_5" type="radio" class="" value="有一个人爱我">
+                            <div>B.有一个人爱我&nbsp;</div>
+                            <input name="T2_5" type="radio" class="" value="都不爱我">
+                            <div>C.都不爱我&nbsp;</div>
+                        </div>
+                        <!--第2.6题-->
+                        <div class="t6">
+                            <p>6．你有心事或者遇到困难时一般向谁诉说（多选）&nbsp;</p>
+                            <input name="T2_6" type="checkbox" class="" value="爸爸妈妈">
+                            <div>A.爸爸妈妈&nbsp;</div>
+                            <input name="T2_6" type="checkbox" class="" value="一起居住的长者">
+                            <div>B.一起居住的长者&nbsp;</div>
+                            <input name="T2_6" type="checkbox" class="" value="朋友同学">
+                            <div>C.朋友同学&nbsp;</div>
+                            <input name="T2_6" type="checkbox" class="" value="老师">
+                            <div>D.老师&nbsp;</div>
+                            <input name="T2_6" type="checkbox" class="" value="写日记向自己诉说">
+                            <div>E.写日记向自己诉说&nbsp;</div>
+                            <input name="T2_6" type="checkbox" class="" value="无人可说或不说">
+                            <div>E.无人可说或不说&nbsp;</div>
+                            <input name="T2_6" type="checkbox" class="" value="其他">
+                            <div>F.其他（请填写）&nbsp;<input type="text" class="T2_6_t" name="T2_6_t"  style="display: none"></div>
+                        </div>
+                        <!--第2.7题-->
+                        <div class="t7">
+                            <p>7.老师对你的态度怎么样?&nbsp;</p>
+                            <input name="T2_7" type="radio" class="" value="非常关心">
+                            <div>A.非常关心&nbsp;</div>
+                            <input name="T2_7" type="radio" class="" value="很关心">
+                            <div>B.很关心&nbsp;</div>
+                            <input name="T2_7" type="radio" class="" value="一般">
+                            <div>C.一般&nbsp;</div>
+                            <input name="T2_7" type="radio" class="" value="不关心">
+                            <div>D.不关心&nbsp;</div>
+                            <input name="T2_7" type="radio" class="" value="不知道">
+                            <div>E.不知道&nbsp;</div>
+                        </div>
+                        <!--第2.8题-->
+                        <div class="t8">
+                            <p>8.你是否愿意主动与老师交谈心里话?&nbsp;</p>
+                            <input name="T2_8" type="radio" class="" value="是">
+                            <div>A.是&nbsp;</div>
+                            <input name="T2_8" type="radio" class="" value="否">
+                            <div>B.否&nbsp;</div>
+                        </div>
+                        <!--第2.9题-->
+                        <div class="t9">
+                            <p>9.你对班集体的态度？</p>
+                            <input name="T2_9" type="radio" class="" value="喜欢">
+                            <div>A.喜欢&nbsp;</div>
+                            <input name="T2_9" type="radio" class="" value="比较喜欢">
+                            <div>B.比较喜欢&nbsp;</div>
+                            <input name="T2_9" type="radio" class="" value="不喜欢">
+                            <div>C.不喜欢&nbsp;</div>
+                        </div>
+                        <!--第2.10题-->
+                        <div class="t10">
+                            <p>10.你在学校里，有朋友吗?</p>
+                            <input name="T2_10" type="radio" class="" value="没有">
+                            <div>A.没有&nbsp;</div>
+                            <input name="T2_10" type="radio" class="" value="1到2个">
+                            <div>B.1到2个&nbsp;</div>
+                            <input name="T2_10" type="radio" class="" value="3到4个">
+                            <div>C.3到4个&nbsp;</div>
+                            <input name="T2_10" type="radio" class="" value="5个以上">
+                            <div>D.5个以上&nbsp;</div>
+                        </div>
+
+
+                        <!--第2.29题-->
+                        <div class="t11" id="yyy">
+                            <p>11.你对自己有不满意的地方吗?</p>
+                            <input name="T2_11" type="radio" class="" value="有">
+                            <div>A.有&nbsp;</div>
+                            <input name="T2_11" type="radio" class="t29_2" value="没有">
+                            <div>B.没有（第12题不做）&nbsp;</div>
+                        </div>
+                        <!--第2.30题-->
+                        <div class="t12">
+                            <p>12．你对自己哪里不满意呢?（多选）</p>
+                            <input name="T2_12" type="radio" class="" value="学习成绩">
+                            <div>A.学习成绩&nbsp;</div>
+                            <input name="T2_12" type="radio" class="" value="身体外貌">
+                            <div>B.身体外貌&nbsp;</div>
+                            <input name="T2_12" type="radio" class="" value="家庭状况">
+                            <div>C.家庭状况&nbsp;</div>
+                            <input name="T2_12" type="radio" class="" value="性格行为">
+                            <div>D.性格行为&nbsp;</div>
+                            <input name="T2_12" type="radio" class="" value="其他">
+                            <div>F.其他（请填写）&nbsp;<input type="text" class="T2_12_t" name="T2_12_t" style="display: none"></div>
+                        </div>
+                        <!--第2.35题-->
+                        <div class="T2_13">
+                            <p>13.目前，你最大的烦恼是什么？</p>
+                            <div><textarea name="T2_13_t" class="T2_13_t" cols="80" rows="2"></textarea></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="提交" id="submit">
+
+        </form>
+
+    </div>
+</div>
+
+
+<div class="black_overlay_0" id="black" style="display: none"></div>
+
+<div class="window_0" id="window" style="display: none">
+    <button onclick="outChange()"></button>
+    <a href="login.html"><br><br>您还没登录，您要先登录吗?</a>
+</div>
+</body>
+
+</html>
+
+

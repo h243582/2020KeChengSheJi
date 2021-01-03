@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 微软雅黑, serif;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    position: relative;
+    top: -5px;
+    left: 3px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.backImg {
+    /*页面背景*/
+    background-color: #EAF2F7;
+    width: 100%;
+    height: 2300px;
+    position: absolute;
+    z-index: -1;
+}
+
+.mainBack {
+    background: #fff;
+    width: 920px;
+    height: 95%;
+    margin-left: 25%;
+}
+
+#information{
+    /*display: block;*/
+   position: relative;
+    margin-right: 10px;
+    margin-top: 20px;
+    float: right;
+    /*right: 40px;*/
+    /*top: 200px;*/
+}
+#information th{
+    /*左边标签*/
+    text-align: right;
+    color: #999;
+}
+#information td,#information th{
+    /*左边和右边标签*/
+    background-color: #F8F8F8;
+    border: #cccccc solid 1px;
+    line-height: 27px;
+}
+.Top {
+    padding: 40px 2% 30px;
+}
+.Top > div:first-child {
+    /*小学生心理健康*/
+    background: #fff;
+    color: #0095ff;
+    font-size: 24px;
+    font-weight: bold; /*粗体*/
+    text-align: center;
+    line-height: 30px;
+    padding: 15px 0;
+}
+.Top > div:nth-child(2) {
+    /*亲爱的同学*/
+    background: #fff;
+    color: #555555;
+    line-height: 24px;
+    text-align: left;
+    font-size: 16px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+
+.title{
+    border-top: 1px dashed #ccc; /*虚线*/
+    margin-top: 50px;
+}
+.littleTitleTop p, .littleTitle p {
+    margin-left: 20px;
+    margin-top: 10px;
+    /*padding-top: 20px;*/
+}
+.littleTitleTop>div{
+    /*标签的前高*/
+    margin-top: 10px;
+}
+.littleTitleTop>div, .littleTitleTop>input, .littleTitle>div>div, .littleTitle>div>input {
+    margin-left: 40px;
+}
+
+.littleTitle{
+    line-height: 32px;
+}
+.littleTitle>div>input {
+    /*按钮*/
+    float: left;
+    /*width: 156px;*/
+    height: 23px;
+    margin-top: 6px;
+
+}
+input{
+    height: 23px;
+}
+.checkbox {
+    /*按钮*/
+    float: left;
+    width: 550px;
+    margin-top: 6px;
+
+}
+.littleTitle>div>div>input{
+    /*请填写*/
+    width: 100px;
+}
+#submit{
+    background-color: #86CE2F;
+    color: white;
+    width: 40%;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    /*margin-right: auto;*/
+    font-size: 20px;
+    display: block;
+    border: 2px solid #B2B2B2;
+    border-radius: 8px;
+    text-align: center;
+}
+#submit:hover{
+    box-shadow: 0 0 5px #008CBA;
+}
+
+/*弹出悬浮div框时，背景被覆盖*/
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 4600px;
+    background-color: whitesmoke;
+    z-index: 1001;
+    /*-moz-opacity: 0.8;*/
+    opacity: 70%;
+    /*filter: alpha(opacity=88);*/
+}
+
+.window {
+    display: none;
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    width: 18%;
+    height: 15%;
+    padding: 30px;
+    border: 10px solid #86CE2F;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    z-index: 1002;
+}
+.window button{
+    background-image:url('../../image/login/cha.png');
+    float: right;height: 32px;
+    width: 33px;border: 2px solid #B2B2B2;
+    border-radius: 10px;
+}
+.window button:hover{
+    box-shadow: 0 0 5px #008CBA;
+}
